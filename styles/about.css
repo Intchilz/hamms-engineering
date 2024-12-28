@@ -1,0 +1,340 @@
+:root {
+    --font-text: "montserrat", sans-serif;
+    --font-title: "montserrat alternates", sans-serif;
+    --color-primary: #164e70;
+    --color-secondary: #333333;
+    --color-accent: #f2a365;
+    --color-white: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  
+  .header {
+    background-color:rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #f4f4f4;
+  }
+  
+  .header__nav {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .nav {
+    width: 100%;
+  }
+  
+  .nav .nav__menu {
+    list-style-type: none;
+    display: none;
+    flex-direction: column;
+  }
+  
+  .nav .nav__menu.show {
+    display: flex;
+  }
+  
+  .nav .nav__menu .nav__menu-item {
+    padding: 0 !important;
+  }
+  
+  .nav .nav__menu .nav__menu-item .nav__menu-link {
+    text-decoration: none;
+    color: green;
+    display: block;
+    padding: 1rem;
+  }
+  
+  .nav .nav__menu .nav__menu-item a:hover {
+    color: rgb(161, 161, 161);
+  }
+  
+  .header__icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--color-white);
+  }
+
+  /* Global Styles */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/*Main Content Area Css*/
+
+/*New footer section*/
+
+.info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.info-container h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+p, address {
+  font-size: 16px;
+  color: #555;
+  width:90%
+}
+
+/*Phone Link section on footer*/
+.email-link p{
+  display:flex;
+  text-decoration: none;
+}
+
+.email-link a {
+  padding-left: 4px;
+  text-decoration: none;
+  color: #555;
+}
+
+.email-link a:hover {
+  color:#218838;
+}
+
+
+
+.address {
+  font-style: normal;
+}
+
+/* Logo Styles */
+
+/* About Header Section */
+.about-header {
+  position: relative;
+  height: 70vh;
+  background: url('https://eu-central.storage.cloudconvert.com/tasks/507a8b4f-99a7-4351-871f-83946ad92a77/About%20us%20header.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20241227%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20241227T105836Z&X-Amz-Expires=86400&X-Amz-Signature=ce8eed02acbbf489a786856d1a8e65ff14177f1ee4465336a859112eb0111c12&X-Amz-SignedHeaders=host&response-content-disposition=inline%3B%20filename%3D%22About%20us%20header.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 3s ease-in-out;
+  margin:0 auto;
+}
+
+.about-header .overlay {
+  position: absolute;
+  top: 10;
+  left: 20;
+  right: 20;
+  bottom: 10;
+  background: rgba(0, 0, 0, 0.4); /* Transparent overlay */
+  border-radius: 0.7cap;
+}
+
+.heading-container {
+  text-align: center;
+  z-index: 1; /* Ensures the text is on top */
+  color: white;
+  animation: slideIn 2s ease-out;
+}
+
+.heading {
+  font-size: 4em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeInUp 1.5s forwards;
+}
+
+.description {
+  font-size: 1.5em;
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeInUp 2s 0.5s forwards;
+  padding-left: 40px;
+  color:#f4f4f4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/*Paragraphs Section*/
+
+/* Section Style */
+.three-paragraphs {
+  padding: 40px 20px;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+   /* padding: 20 0px;Padding on the left and right */
+  padding-left: 8rem;
+}
+
+.paragraph {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+/* Numbered Sections Layout */
+.numbered-sections {
+  background-color: #fff;
+  padding: 40px 20px;
+  color:#555;;
+}
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.section-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.bullet-points {
+  list-style-type: none;
+}
+
+.bullet-points li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.services-section {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid Layout for Services */
+.service-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Default to 4 columns for the first 3 rows */
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.service-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1.1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Fancy Hover Effects */
+.service-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-item:hover:before {
+  opacity: 1;
+}

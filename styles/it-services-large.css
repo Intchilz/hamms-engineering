@@ -1,0 +1,209 @@
+@media (min-width: 480px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    img {
+        width: 100%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .header {
+      flex-direction: row;
+    }
+  
+    .nav .nav__menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      margin: 1rem;
+    }
+  
+    .nav .nav__menu .nav__menu-item {
+      margin: 0;
+      text-align: center;
+      padding: 1rem;
+    }
+  
+    .header__icon {
+      display: none;
+    }
+    /*Desktop editing*/
+    img {
+        width: 5cm;
+    }
+
+
+    .footer1 {
+      background-color: #f4f4f4;
+      color:  #666;
+      padding-left:0.8rem;
+      font-size: 13px;
+      font-family: var(--font-text);
+  
+    }
+
+    .logo  img {
+      text-align:center;
+      width: 70%;
+      padding-top:6cap;
+      padding-left: 6rem;
+    }
+
+    .logo p {
+      text-align: center;
+      padding-left: 1rem;
+      color:#218838;
+    }
+
+    .line-breaker1, hr {
+        border: 0;            /* Remove the default border */
+        height: 2px;          /* Set the height of the line */
+        background-color:green; /* Set the color of the line */
+        margin: 0px auto;    /* Add space above and below the line */
+        width: 100%;
+        align-items: left;
+        margin-bottom: 10px;
+        animation: textSlideIn 1s ease-out forwards;
+    }
+  }
+
+    /*Mobile-view editing*/
+@media (max-width: 768px) {
+    .header__nav img {
+      width: 40%;
+    }
+
+    #navHamburger {
+      color:gray;
+    }
+
+    .info-section {
+      padding: 40px 20px;
+    }
+
+    .mobile-line {
+      border: 0;            /* Remove the default border */
+      height: 2px;          /* Set the height of the line */
+      background-color:green; /* Set the color of the line */
+      width: 100%;           /* Set the width of the line */
+      margin: 0px auto;    /* Add space above and below the line */
+    }
+
+    .line-breaker1, hr {
+      border: 0;            /* Remove the default border */
+      height: 2px;          /* Set the height of the line */
+      background-color:green; /* Set the color of the line */
+      margin: 0px auto;    /* Add space above and below the line */
+      width: 100%;
+      align-items: left;
+      margin-bottom: 10px;
+      animation: textSlideIn 1s ease-out forwards;
+    }
+
+    .footer1 {
+      background-color: #f4f4f4;
+      color:  #666;
+      padding-left:0.8rem;
+      font-size: 13px;
+      font-family: var(--font-text);
+      text-align: center;
+  
+    }
+
+    .contact address {
+      text-align: left;
+    }
+
+    .email-link a {
+      color:#218838;
+    }
+
+    .about h2 {
+      text-align: left;
+    }
+
+    .about p {
+      border-radius: 8px;
+      text-align: left;
+    }
+}
+
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+      transform: translateX(-50px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* New footer css */
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .info-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .about, .contact, .logo {
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .logo p {
+    padding-left:3cap;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 20px;
+  }
+
+  p, address {
+      font-size: 14px;
+  }
+}
+
+/* Media Query Adjustments for smaller devices */
+
+/* Adjustments for tablets (max-width 768px) */
+@media (max-width: 768px) {
+  .info-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .about, .contact, .logo {
+      margin-bottom: 20px;
+  }
+
+  .logo img {
+      width: 100%;
+      max-width: 150px;
+  }
+
+  .logo p {
+    color:#218838;
+  }
+}
